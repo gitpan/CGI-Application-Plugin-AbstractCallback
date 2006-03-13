@@ -3,7 +3,7 @@ package CGI::Application::Plugin::AbstractCallback;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Carp;
 use CGI::Application;
@@ -40,7 +40,7 @@ __END__
 
 =head1 NAME
 
-CGI::Application::Plugin::AbstractCallback - This is the abstract method for externalizing call backs
+CGI::Application::Plugin::AbstractCallback - This is the abstract method for externalizing callbacks
 
 =head1 SYNOPSIS
 
@@ -65,14 +65,14 @@ CGI::Application::Plugin::AbstractCallback - This is the abstract method for ext
 
 =head1 DESCRIPTION
 
-This module is the abstract class for externalizing call backs.
+This module is the abstract class for externalizing callbacks.
 The callback defined in the child class( of this class)  is added in specified hook.
 
 =head1 METHODS
 
 =head2 callback()
 
-This method is abstract, So you should implement and override the method as call back.
+This method is abstract, So you should implement and override the method as callback.
 
 =head1 SEE ALSO
 
