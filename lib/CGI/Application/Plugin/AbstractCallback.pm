@@ -3,7 +3,7 @@ package CGI::Application::Plugin::AbstractCallback;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Carp;
 use CGI::Application;
@@ -17,7 +17,8 @@ sub import {
 	if (UNIVERSAL::isa($caller, 'CGI::Application') && defined $hook) {
 		eval {
 			no strict 'refs';
-			$caller->add_callback($hook, \&{$class . '::callback'});
+			# $caller->add_callback($hook, \&{$class . '::callback'});
+			$caller->add_callback($hook, $class->can('callback'));
 		};
 		if ($@) {
 			carp $@;

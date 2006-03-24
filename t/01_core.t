@@ -1,3 +1,4 @@
+use lib qw(./t/lib);
 use Test::More qw|no_plan|;
 
 #########################
